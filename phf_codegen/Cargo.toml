@@ -10,4 +10,8 @@ readme = "../README.md"
 
 [dependencies]
 phf_generator = "0.10.0"
-phf_shared = "0.10.0"
+phf_shared = { version = "0.10.0", default-features = false }
+
+[features]
+default = ["std"]
+std = ["phf_shared/std"]
